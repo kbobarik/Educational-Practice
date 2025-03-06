@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="conference/Views/JureView.axaml" value="conference/conference.csproj" />
+        <entry key="conference/Views/MainWindow.axaml" value="conference/conference.csproj" />
+        <entry key="conference/Views/ModeratorView.axaml" value="conference/conference.csproj" />
+        <entry key="conference/Views/OrganizatorView.axaml" value="conference/conference.csproj" />
+        <entry key="conference/Views/ParticipantView.axaml" value="conference/conference.csproj" />
+        <entry key="conference/Views/PublicView.axaml" value="conference/conference.csproj" />
+        <entry key="conference/Views/RegistrationView.axaml" value="conference/conference.csproj" />
+        <entry key="conference/Views/SignInView.axaml" value="conference/conference.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

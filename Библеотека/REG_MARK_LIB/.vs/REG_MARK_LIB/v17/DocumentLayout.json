@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\\u0443\u0447\u0435\u0431\u043D\u0430\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0411\u0438\u0431\u043B\u0435\u043E\u0442\u0435\u043A\u0430\\REG_MARK_LIB\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9739AE66-0A86-4298-9792-E92BFA7AF232}|REG_MARK_LIB\\REG_MARK_LIB.csproj|c:\\users\\user\\desktop\\\u0443\u0447\u0435\u0431\u043D\u0430\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0431\u0438\u0431\u043B\u0435\u043E\u0442\u0435\u043A\u0430\\reg_mark_lib\\reg_mark_lib\\reg_mark_class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9739AE66-0A86-4298-9792-E92BFA7AF232}|REG_MARK_LIB\\REG_MARK_LIB.csproj|solutionrelative:reg_mark_lib\\reg_mark_class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6723D8B-BE56-4F3C-92C5-3CC2DE30D3CE}|REG_MARK_UNIT_TESTS\\REG_MARK_UNIT_TESTS.csproj|C:\\Users\\User\\Desktop\\\u0443\u0447\u0435\u0431\u043D\u0430\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0411\u0438\u0431\u043B\u0435\u043E\u0442\u0435\u043A\u0430\\REG_MARK_LIB\\reg_mark_unit_tests\\reg_mark_test_class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6723D8B-BE56-4F3C-92C5-3CC2DE30D3CE}|REG_MARK_UNIT_TESTS\\REG_MARK_UNIT_TESTS.csproj|solutionrelative:reg_mark_unit_tests\\reg_mark_test_class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 290,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "REG_MARK_CLASS.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u0443\u0447\u0435\u0431\u043D\u0430\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0411\u0438\u0431\u043B\u0435\u043E\u0442\u0435\u043A\u0430\\REG_MARK_LIB\\REG_MARK_LIB\\REG_MARK_CLASS.cs",
+              "RelativeDocumentMoniker": "REG_MARK_LIB\\REG_MARK_CLASS.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u0443\u0447\u0435\u0431\u043D\u0430\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0411\u0438\u0431\u043B\u0435\u043E\u0442\u0435\u043A\u0430\\REG_MARK_LIB\\REG_MARK_LIB\\REG_MARK_CLASS.cs",
+              "RelativeToolTip": "REG_MARK_LIB\\REG_MARK_CLASS.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAwBcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T12:38:21.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "REG_MARK_TEST_CLASS.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u0443\u0447\u0435\u0431\u043D\u0430\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0411\u0438\u0431\u043B\u0435\u043E\u0442\u0435\u043A\u0430\\REG_MARK_LIB\\REG_MARK_UNIT_TESTS\\REG_MARK_TEST_CLASS.cs",
+              "RelativeDocumentMoniker": "REG_MARK_UNIT_TESTS\\REG_MARK_TEST_CLASS.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u0443\u0447\u0435\u0431\u043D\u0430\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0411\u0438\u0431\u043B\u0435\u043E\u0442\u0435\u043A\u0430\\REG_MARK_LIB\\REG_MARK_UNIT_TESTS\\REG_MARK_TEST_CLASS.cs",
+              "RelativeToolTip": "REG_MARK_UNIT_TESTS\\REG_MARK_TEST_CLASS.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAA6wGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T15:11:24.035Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

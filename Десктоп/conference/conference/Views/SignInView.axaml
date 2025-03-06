@@ -1,0 +1,34 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="conference.SignInView"
+             xmlns:vm="using:conference.ViewModels"
+             x:DataType="vm:SignInViewModel" 
+             Background="White">
+    <Grid RowDefinitions="50,*">
+        <Button Content="←" Margin="10" Command="{Binding NavigateToPublicView}" Foreground="Black" Background="LightGray"></Button>
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Foreground="Black" FontSize="20" FontWeight="Bold" Margin="10" HorizontalAlignment="Center">Авторизация</TextBlock>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Width="400" Margin="10">
+                <TextBlock Foreground="Black">Введите свой ID</TextBlock>
+                <TextBox Text="{Binding Username}" Foreground="Black" Background="White"></TextBox>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Width="400" Margin="10">
+                <TextBlock Foreground="Black" >Введите пароль</TextBlock>
+                <TextBox Text="{Binding Password}" Foreground="Black" Background="White"></TextBox>
+            </StackPanel>
+            <UserControl Content="{Binding CanvasCapcha}"></UserControl>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Width="400" Margin="10">
+                <TextBlock Foreground="Black" >Введите капчу</TextBlock>
+                <TextBox Text="{Binding InputCapcha}" Foreground="Black" Background="White"></TextBox>
+            </StackPanel>
+            <TextBlock Text="{Binding Info}" Foreground="DarkRed"></TextBlock>
+            <Button Content="Войти" Margin="10" IsEnabled="{Binding IsEnabled}"  Width="400" Foreground="White" Background="LightGreen"
+                    VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Command="{Binding Enter}">
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

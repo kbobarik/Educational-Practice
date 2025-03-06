@@ -1,0 +1,6 @@
+C:\Users\User\source\repos\REG_MARK_LIB\REG_MARK_LIB\bin\Debug\REG_MARK_LIB.dll
+C:\Users\User\source\repos\REG_MARK_LIB\REG_MARK_LIB\bin\Debug\REG_MARK_LIB.pdb
+C:\Users\User\source\repos\REG_MARK_LIB\REG_MARK_LIB\obj\Debug\REG_MARK_LIB.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\REG_MARK_LIB\REG_MARK_LIB\obj\Debug\REG_MARK_LIB.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\REG_MARK_LIB\REG_MARK_LIB\obj\Debug\REG_MARK_LIB.dll
+C:\Users\User\source\repos\REG_MARK_LIB\REG_MARK_LIB\obj\Debug\REG_MARK_LIB.pdb

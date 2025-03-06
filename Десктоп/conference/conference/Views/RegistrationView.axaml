@@ -1,0 +1,116 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="conference.Views.RegistrationView"
+             xmlns:vm="using:conference.ViewModels"
+             x:DataType="vm:RegistrationViewModel"
+             Background="White"
+             xmlns:conv="using:conference.Assets">
+    <UserControl.Resources>
+        <conv:ImageConverter x:Key="MyImageConverter" />
+    </UserControl.Resources>
+    <Grid RowDefinitions="80,*" ColumnDefinitions="*,2*" Background="White">
+        <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Foreground="Black" FontSize="20" TextAlignment="Center" FontWeight="Bold">Регистрация жюри/модератора</TextBlock>
+        </StackPanel>
+        <Grid Grid.Row="1" Grid.Column="0" RowDefinitions="*,*,*,*,*,*,*,*,*" ColumnDefinitions="*,*"
+              VerticalAlignment="Stretch" HorizontalAlignment="Left">
+            <TextBlock Grid.Row="0" Grid.Column="0" Foreground="Black" HorizontalAlignment="Left" FontSize="14">ID Number: </TextBlock>
+            <TextBox Grid.Row="0" Grid.Column="1" TextAlignment="Center" HorizontalAlignment="Left" Height="20"
+                     Background="LightGray" Width=" 200" Text="{Binding NumberId}" IsEnabled="False">
+            </TextBox>
+            <TextBlock Grid.Row="1" Grid.Column="0" Foreground="Black" FontSize="14" Margin="5">ФИО: </TextBlock>
+            <TextBox Grid.Row="1" Grid.Column="1" TextAlignment="Center" HorizontalAlignment="Left" Height="20"
+                     Background="LightGray" Width=" 200" Text="{Binding FIO}">
+            </TextBox>
+            <TextBlock Grid.Row="2" Grid.Column="0" Foreground="Black" FontSize="14" Margin="5">Пол: </TextBlock>
+            <ComboBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" SelectedItem="{Binding SelectedGender}"
+                      ItemsSource="{Binding Genders}" Background="LightGray" Width=" 200">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Foreground="Black" FontSize="14" Text="{Binding Title}"></TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <TextBlock Grid.Row="3" Grid.Column="0" Foreground="Black" FontSize="14" Margin="5">Роль: </TextBlock>
+            <ComboBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" SelectedItem="{Binding SelectedRole}"
+                      ItemsSource="{Binding Roles}" Background="LightGray" Width=" 200">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Foreground="Black" FontSize="14" Text="{Binding Title}"></TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <TextBlock Grid.Row="4" Grid.Column="0" Foreground="Black" FontSize="14" Margin="5">Email: </TextBlock>
+            <TextBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" TextAlignment="Center" Height="20"
+                     Background="LightGray" Width=" 200" Text="{Binding Email}">
+            </TextBox>
+
+            <TextBlock Grid.Row="5" Grid.Column="0" Foreground="Black" FontSize="14" Margin="5">Телефон: </TextBlock>
+            <MaskedTextBox Grid.Row="5" Grid.Column="1" Mask="+\7(000)-000-00-00" HorizontalAlignment="Left"
+                           Height="20" Text="{Binding PhoneNumber}" Width="200" />
+
+            <TextBlock Grid.Row="6" Grid.Column="0" Foreground="Black" FontSize="14" Margin="5">Направление: </TextBlock>
+            <ComboBox Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left"
+                      SelectedItem="{Binding SelectedTypeOfEvent}" ItemsSource="{Binding TypeOfEvents}" Width="200"
+                      Background="LightGray">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Foreground="Black" FontSize="14" Text="{Binding Title}"></TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <CheckBox Grid.Row="7" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"
+                      IsChecked="{Binding IsAttach}">
+            </CheckBox>
+            <TextBlock Grid.Row="7" Grid.Column="1" TextAlignment="Left" VerticalAlignment="Center" Foreground="Black"
+                       FontSize="10" Margin="5">
+                Прекрепить к мероприятию
+            </TextBlock>
+            <TextBlock Grid.Row="8" Grid.Column="0" Foreground="Black" FontSize="14" Margin="5"
+                       IsVisible="{Binding IsAttach}">
+                Мероприятие:
+            </TextBlock>
+            <ComboBox Grid.Row="8" Grid.Column="1" HorizontalAlignment="Left" ItemsSource="{Binding Events}"
+                      IsVisible="{Binding IsAttach}" Background="LightGray" Width=" 200">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Foreground="Black" FontSize="14" Text="{Binding Title}"></TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" RowDefinitions="5*,*,*,*,*,*" ColumnDefinitions="*,3*">
+            <Button Grid.Column="1" Grid.Row="0" Command="{Binding SelectAndSaveImage}">
+                <Image 
+                       Source="{Binding Image,  Converter= {StaticResource MyImageConverter}}"
+                       HorizontalAlignment="Right" VerticalAlignment="Center" Width="200"
+                       Height="200" Margin="5" />
+            </Button>
+            <TextBlock Grid.Row="1" Grid.Column="0" Foreground="Black" FontSize="14" Margin="5" >Пароль: </TextBlock>
+            <TextBox Grid.Row="1" Grid.Column="1" TextAlignment="Center" HorizontalAlignment="Left" Watermark="Password" Height="20"
+                     Background="LightGray" Width=" 200" Text="{Binding Password}" PasswordChar="{Binding PasswordChar}">
+            </TextBox>
+            <TextBlock Grid.Row="2" Grid.Column="0" Foreground="Black" FontSize="14" Margin="5">Повтор пароля: </TextBlock>
+            <TextBox Grid.Row="2" Grid.Column="1" TextAlignment="Center" Watermark="Re-enter password" HorizontalAlignment="Left" PasswordChar="{Binding PasswordChar}" Height="20"
+                     Background="LightGray" Width=" 200" Text="{Binding ConfirmPassword}">
+            </TextBox>
+            <CheckBox Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"
+                      IsChecked="{Binding IsVisible}">
+            </CheckBox>
+            <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Left" VerticalAlignment="Center" Foreground="Black"
+                       FontSize="10" Margin="5">
+                Видимый пароль
+            </TextBlock>
+            <TextBlock Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="0" Text="{Binding Info}" Foreground="DarkRed"></TextBlock>
+            <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
+                <Button Command="{Binding Save}">ОК</Button>
+                <Button Command="{Binding Cancel}">Отмена</Button>
+            </StackPanel>
+            
+        </Grid>
+    </Grid>
+</UserControl>

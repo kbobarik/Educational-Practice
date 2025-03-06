@@ -1,0 +1,50 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:vm="using:conference.ViewModels"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="conference.Views.PublicView"
+             x:DataType="vm:PublicViewModel"
+             Background="White"
+             xmlns:conv="using:conference.Assets">
+    <UserControl.Resources>
+        <conv:ImageConverter x:Key="MyImageConverter" />
+    </UserControl.Resources>
+    <Grid RowDefinitions="80,*">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+            <ComboBox ItemsSource="{Binding TypeOfEvents}" Foreground="Black" Background="LightGray" Margin="0 0 10 0" SelectedItem="{Binding SelectedEvent}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Title}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <ComboBox ItemsSource="{Binding DateEvents}"  Foreground="Black" Background="LightGray" Margin="0 0 10 0" SelectedItem="{Binding SelectedDate}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding }" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button Content="Авторизоваться" HorizontalAlignment="Right" Command="{Binding NavigationToSignIn}" Foreground="White" Background="DarkSeaGreen"></Button>
+        </StackPanel>
+        <ListBox Grid.Row="1" ItemsSource="{Binding Events}" Background="White">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                        <Image Source="{Binding Image, Converter= {StaticResource MyImageConverter}}" Width="100"
+                               Height="100"  Margin="0 0 10 0"/>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                            <TextBlock Text="{Binding Title}" Foreground="Black"></TextBlock>
+                            <TextBlock Text="{Binding IdTypeOfEventNavigation.Title}" Foreground="Black"></TextBlock>
+                            <TextBlock Text="{Binding Date}"  Foreground="Black"></TextBlock>
+
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBlock Text="Мероприятия не найдены" Grid.Row="1" IsVisible="{Binding IsVisible}" Foreground="Black"></TextBlock>
+    </Grid>
+</UserControl>

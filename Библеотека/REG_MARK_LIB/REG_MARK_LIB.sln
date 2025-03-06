@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REG_MARK_LIB", "REG_MARK_LIB\REG_MARK_LIB.csproj", "{9739AE66-0A86-4298-9792-E92BFA7AF232}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REG_MARK_UNIT_TESTS", "REG_MARK_UNIT_TESTS\REG_MARK_UNIT_TESTS.csproj", "{B6723D8B-BE56-4F3C-92C5-3CC2DE30D3CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9739AE66-0A86-4298-9792-E92BFA7AF232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9739AE66-0A86-4298-9792-E92BFA7AF232}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9739AE66-0A86-4298-9792-E92BFA7AF232}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9739AE66-0A86-4298-9792-E92BFA7AF232}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6723D8B-BE56-4F3C-92C5-3CC2DE30D3CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6723D8B-BE56-4F3C-92C5-3CC2DE30D3CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6723D8B-BE56-4F3C-92C5-3CC2DE30D3CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6723D8B-BE56-4F3C-92C5-3CC2DE30D3CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

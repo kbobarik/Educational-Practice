@@ -1,0 +1,484 @@
+-- DROP SCHEMA public;
+
+CREATE SCHEMA public AUTHORIZATION pg_database_owner;
+
+COMMENT ON SCHEMA public IS 'standard public schema';
+
+-- DROP SEQUENCE public.activities_id_activity_seq;
+
+CREATE SEQUENCE public.activities_id_activity_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.activities_id_activity_seq OWNER TO postgres;
+GRANT ALL ON SEQUENCE public.activities_id_activity_seq TO postgres;
+
+-- DROP SEQUENCE public.cities_id_city_seq;
+
+CREATE SEQUENCE public.cities_id_city_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.cities_id_city_seq OWNER TO postgres;
+GRANT ALL ON SEQUENCE public.cities_id_city_seq TO postgres;
+
+-- DROP SEQUENCE public.countries_id_country_seq;
+
+CREATE SEQUENCE public.countries_id_country_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.countries_id_country_seq OWNER TO postgres;
+GRANT ALL ON SEQUENCE public.countries_id_country_seq TO postgres;
+
+-- DROP SEQUENCE public.events_id_event_seq;
+
+CREATE SEQUENCE public.events_id_event_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.events_id_event_seq OWNER TO postgres;
+GRANT ALL ON SEQUENCE public.events_id_event_seq TO postgres;
+
+-- DROP SEQUENCE public.genders_id_gender_seq;
+
+CREATE SEQUENCE public.genders_id_gender_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.genders_id_gender_seq OWNER TO postgres;
+GRANT ALL ON SEQUENCE public.genders_id_gender_seq TO postgres;
+
+-- DROP SEQUENCE public.images_id_image_seq;
+
+CREATE SEQUENCE public.images_id_image_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.images_id_image_seq OWNER TO postgres;
+GRANT ALL ON SEQUENCE public.images_id_image_seq TO postgres;
+
+-- DROP SEQUENCE public.roles_id_role_seq;
+
+CREATE SEQUENCE public.roles_id_role_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.roles_id_role_seq OWNER TO postgres;
+GRANT ALL ON SEQUENCE public.roles_id_role_seq TO postgres;
+
+-- DROP SEQUENCE public.schedule_activity_id_shedule_activity_seq;
+
+CREATE SEQUENCE public.schedule_activity_id_shedule_activity_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.schedule_activity_id_shedule_activity_seq OWNER TO postgres;
+GRANT ALL ON SEQUENCE public.schedule_activity_id_shedule_activity_seq TO postgres;
+
+-- DROP SEQUENCE public.schedule_id_schedule_seq;
+
+CREATE SEQUENCE public.schedule_id_schedule_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.schedule_id_schedule_seq OWNER TO postgres;
+GRANT ALL ON SEQUENCE public.schedule_id_schedule_seq TO postgres;
+
+-- DROP SEQUENCE public.shedule_activity_jure_id_shedule_activity_jure_seq;
+
+CREATE SEQUENCE public.shedule_activity_jure_id_shedule_activity_jure_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.shedule_activity_jure_id_shedule_activity_jure_seq OWNER TO postgres;
+GRANT ALL ON SEQUENCE public.shedule_activity_jure_id_shedule_activity_jure_seq TO postgres;
+
+-- DROP SEQUENCE public.type_of_events_id_type_of_event_seq;
+
+CREATE SEQUENCE public.type_of_events_id_type_of_event_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.type_of_events_id_type_of_event_seq OWNER TO postgres;
+GRANT ALL ON SEQUENCE public.type_of_events_id_type_of_event_seq TO postgres;
+
+-- DROP SEQUENCE public.users_id_user_seq;
+
+CREATE SEQUENCE public.users_id_user_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.users_id_user_seq OWNER TO postgres;
+GRANT ALL ON SEQUENCE public.users_id_user_seq TO postgres;
+-- public.activities определение
+
+-- Drop table
+
+-- DROP TABLE public.activities;
+
+CREATE TABLE public.activities (
+	id_activity serial4 NOT NULL,
+	title varchar NOT NULL,
+	CONSTRAINT activities_pk PRIMARY KEY (id_activity)
+);
+
+-- Permissions
+
+ALTER TABLE public.activities OWNER TO postgres;
+GRANT ALL ON TABLE public.activities TO postgres;
+
+
+-- public.cities определение
+
+-- Drop table
+
+-- DROP TABLE public.cities;
+
+CREATE TABLE public.cities (
+	id_city serial4 NOT NULL,
+	title varchar NOT NULL,
+	CONSTRAINT cities_pk PRIMARY KEY (id_city)
+);
+
+-- Permissions
+
+ALTER TABLE public.cities OWNER TO postgres;
+GRANT ALL ON TABLE public.cities TO postgres;
+
+
+-- public.countries определение
+
+-- Drop table
+
+-- DROP TABLE public.countries;
+
+CREATE TABLE public.countries (
+	id_country serial4 NOT NULL,
+	russian_title varchar NOT NULL,
+	english_title varchar NOT NULL,
+	code1 varchar NULL,
+	code2 int4 NULL,
+	CONSTRAINT countries_pk PRIMARY KEY (id_country)
+);
+
+-- Permissions
+
+ALTER TABLE public.countries OWNER TO postgres;
+GRANT ALL ON TABLE public.countries TO postgres;
+
+
+-- public.directions определение
+
+-- Drop table
+
+-- DROP TABLE public.directions;
+
+CREATE TABLE public.directions (
+	id_direction int4 NOT NULL,
+	title varchar NOT NULL,
+	CONSTRAINT directions_pk PRIMARY KEY (id_direction)
+);
+
+-- Permissions
+
+ALTER TABLE public.directions OWNER TO postgres;
+GRANT ALL ON TABLE public.directions TO postgres;
+
+
+-- public.genders определение
+
+-- Drop table
+
+-- DROP TABLE public.genders;
+
+CREATE TABLE public.genders (
+	id_gender serial4 NOT NULL,
+	title varchar NOT NULL,
+	CONSTRAINT genders_pk PRIMARY KEY (id_gender)
+);
+
+-- Permissions
+
+ALTER TABLE public.genders OWNER TO postgres;
+GRANT ALL ON TABLE public.genders TO postgres;
+
+
+-- public.images определение
+
+-- Drop table
+
+-- DROP TABLE public.images;
+
+CREATE TABLE public.images (
+	id_image serial4 NOT NULL,
+	title varchar NOT NULL,
+	CONSTRAINT images_pk PRIMARY KEY (id_image)
+);
+
+-- Permissions
+
+ALTER TABLE public.images OWNER TO postgres;
+GRANT ALL ON TABLE public.images TO postgres;
+
+
+-- public.roles определение
+
+-- Drop table
+
+-- DROP TABLE public.roles;
+
+CREATE TABLE public.roles (
+	id_role serial4 NOT NULL,
+	title varchar NOT NULL,
+	CONSTRAINT roles_pk PRIMARY KEY (id_role)
+);
+
+-- Permissions
+
+ALTER TABLE public.roles OWNER TO postgres;
+GRANT ALL ON TABLE public.roles TO postgres;
+
+
+-- public.type_of_events определение
+
+-- Drop table
+
+-- DROP TABLE public.type_of_events;
+
+CREATE TABLE public.type_of_events (
+	id_type_of_event serial4 NOT NULL,
+	title varchar NULL,
+	CONSTRAINT type_of_events_pk PRIMARY KEY (id_type_of_event)
+);
+
+-- Permissions
+
+ALTER TABLE public.type_of_events OWNER TO postgres;
+GRANT ALL ON TABLE public.type_of_events TO postgres;
+
+
+-- public.cities_images определение
+
+-- Drop table
+
+-- DROP TABLE public.cities_images;
+
+CREATE TABLE public.cities_images (
+	id_city int4 NOT NULL,
+	id_image int4 NOT NULL,
+	CONSTRAINT cities_images_pk PRIMARY KEY (id_image, id_city),
+	CONSTRAINT cities_images_cities_fk FOREIGN KEY (id_city) REFERENCES public.cities(id_city),
+	CONSTRAINT cities_images_images_fk FOREIGN KEY (id_image) REFERENCES public.images(id_image)
+);
+
+-- Permissions
+
+ALTER TABLE public.cities_images OWNER TO postgres;
+GRANT ALL ON TABLE public.cities_images TO postgres;
+
+
+-- public.events определение
+
+-- Drop table
+
+-- DROP TABLE public.events;
+
+CREATE TABLE public.events (
+	id_event serial4 NOT NULL,
+	id_city int4 NOT NULL,
+	title varchar NULL,
+	"date" date NOT NULL,
+	id_type_of_event int4 NOT NULL,
+	image varchar NULL,
+	CONSTRAINT events_pk PRIMARY KEY (id_event),
+	CONSTRAINT events_cities_fk FOREIGN KEY (id_city) REFERENCES public.cities(id_city),
+	CONSTRAINT events_type_of_events_fk FOREIGN KEY (id_type_of_event) REFERENCES public.type_of_events(id_type_of_event)
+);
+
+-- Permissions
+
+ALTER TABLE public.events OWNER TO postgres;
+GRANT ALL ON TABLE public.events TO postgres;
+
+
+-- public.users определение
+
+-- Drop table
+
+-- DROP TABLE public.users;
+
+CREATE TABLE public.users (
+	id_user serial4 NOT NULL,
+	date_of_bitrh date NULL,
+	id_counrty int4 NULL,
+	id_direction int4 NULL,
+	"password" varchar NOT NULL,
+	image varchar NULL,
+	last_name varchar NOT NULL,
+	first_name varchar NOT NULL,
+	patronymic varchar NULL,
+	email varchar NOT NULL,
+	phone_number varchar NOT NULL,
+	id_gender int4 NOT NULL,
+	id_role int4 NOT NULL,
+	id_type_of_events int4 NULL,
+	CONSTRAINT jury_pk PRIMARY KEY (id_user),
+	CONSTRAINT users_countries_fk FOREIGN KEY (id_counrty) REFERENCES public.countries(id_country),
+	CONSTRAINT users_directions_fk FOREIGN KEY (id_direction) REFERENCES public.directions(id_direction),
+	CONSTRAINT users_genders_fk FOREIGN KEY (id_gender) REFERENCES public.genders(id_gender),
+	CONSTRAINT users_roles_fk FOREIGN KEY (id_role) REFERENCES public.roles(id_role),
+	CONSTRAINT users_type_of_events_fk FOREIGN KEY (id_type_of_events) REFERENCES public.type_of_events(id_type_of_event)
+);
+
+-- Permissions
+
+ALTER TABLE public.users OWNER TO postgres;
+GRANT ALL ON TABLE public.users TO postgres;
+
+
+-- public.schedule определение
+
+-- Drop table
+
+-- DROP TABLE public.schedule;
+
+CREATE TABLE public.schedule (
+	id_schedule serial4 NOT NULL,
+	id_winner int4 NOT NULL,
+	id_event int4 NOT NULL,
+	CONSTRAINT schedule_pk PRIMARY KEY (id_schedule),
+	CONSTRAINT schedule_events_fk FOREIGN KEY (id_event) REFERENCES public.events(id_event),
+	CONSTRAINT schedule_users_fk FOREIGN KEY (id_winner) REFERENCES public.users(id_user)
+);
+
+-- Permissions
+
+ALTER TABLE public.schedule OWNER TO postgres;
+GRANT ALL ON TABLE public.schedule TO postgres;
+
+
+-- public.schedule_activity определение
+
+-- Drop table
+
+-- DROP TABLE public.schedule_activity;
+
+CREATE TABLE public.schedule_activity (
+	id_schedule int4 NOT NULL,
+	id_activity int4 NOT NULL,
+	id_moderator int4 NOT NULL,
+	id_shedule_activity serial4 NOT NULL,
+	number_day int4 NOT NULL,
+	start_time time NOT NULL,
+	CONSTRAINT schedule_activity_pk PRIMARY KEY (id_shedule_activity),
+	CONSTRAINT schedule_activity_activities_fk FOREIGN KEY (id_activity) REFERENCES public.activities(id_activity),
+	CONSTRAINT schedule_activity_schedule_fk FOREIGN KEY (id_schedule) REFERENCES public.schedule(id_schedule),
+	CONSTRAINT schedule_activity_users_fk FOREIGN KEY (id_moderator) REFERENCES public.users(id_user)
+);
+
+-- Permissions
+
+ALTER TABLE public.schedule_activity OWNER TO postgres;
+GRANT ALL ON TABLE public.schedule_activity TO postgres;
+
+
+-- public.shedule_activity_jure определение
+
+-- Drop table
+
+-- DROP TABLE public.shedule_activity_jure;
+
+CREATE TABLE public.shedule_activity_jure (
+	id_shedule_activity_jure serial4 NOT NULL,
+	id_schedule_activity int4 NOT NULL,
+	id_jure int4 NOT NULL,
+	CONSTRAINT shedule_activity_jure_pk PRIMARY KEY (id_shedule_activity_jure),
+	CONSTRAINT shedule_activity_jure_schedule_activity_fk FOREIGN KEY (id_schedule_activity) REFERENCES public.schedule_activity(id_shedule_activity),
+	CONSTRAINT shedule_activity_jure_users_fk FOREIGN KEY (id_jure) REFERENCES public.users(id_user)
+);
+
+-- Permissions
+
+ALTER TABLE public.shedule_activity_jure OWNER TO postgres;
+GRANT ALL ON TABLE public.shedule_activity_jure TO postgres;
+
+
+
+
+-- Permissions
+
+GRANT ALL ON SCHEMA public TO pg_database_owner;
+GRANT USAGE ON SCHEMA public TO public;

@@ -1,0 +1,73 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:conference.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="conference.Views.OrganizatorView"
+             Background="White"
+             xmlns:conv="using:conference.Assets"
+             x:DataType="vm:OrganizatorViewModel">
+    <UserControl.Resources>
+        <conv:ImageConverter x:Key="MyImageConverter" />
+    </UserControl.Resources>
+    <Grid RowDefinitions="80,*" ColumnDefinitions="*,2*">
+        <Border Grid.ColumnSpan="2"
+                BorderBrush="Black"
+                BorderThickness="2">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Black" FontSize="20" FontWeight="Bold">Окно Организатора</TextBlock>
+            </StackPanel>
+        </Border>
+        <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Image Source="{Binding Organizator.Image, Converter= {StaticResource MyImageConverter}}" Width="200"
+                   Margin="50" />
+            <Border 
+                    BorderBrush="Black"
+                    BorderThickness="2"
+                    CornerRadius="10">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+                    <Button Foreground="Black" FontSize="20" Background="Transparent">Мой профиль</Button>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Spacing="25" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <TextBlock Foreground="Black" FontSize="20" FontWeight="Bold" TextAlignment="Center" Text="{Binding Welcome}"></TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Foreground="Black" FontSize="20" FontWeight="Bold" Text="{Binding GenderOrganizator}"></TextBlock>
+                <TextBlock Foreground="Black" FontSize="20" FontWeight="Bold" Text="{Binding Organizator.FirstName}"></TextBlock>
+            </StackPanel>
+            <Border Background="Gainsboro"
+                    BorderBrush="Black"
+                    BorderThickness="2"
+                    CornerRadius="20"
+                    Height="100"
+                    Margin="5">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button Foreground="Black" FontSize="20">Мероприятия</Button>
+                </StackPanel>
+            </Border>
+            <Border Background="Gainsboro"
+                    BorderBrush="Black"
+                    BorderThickness="2"
+                    CornerRadius="20"
+                    Height="100"
+                    Margin="5">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button Foreground="Black" FontSize="20">Участники</Button>
+                </StackPanel>
+            </Border>
+            <Border Background="Gainsboro"
+                    BorderBrush="Black"
+                    BorderThickness="2"
+                    CornerRadius="20"
+                    Height="100"
+                    Margin="5">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button Foreground="Black" FontSize="20" Command="{Binding NavigateToRegistration}">Жюри</Button>
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

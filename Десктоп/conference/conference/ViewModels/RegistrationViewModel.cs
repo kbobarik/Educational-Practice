@@ -279,8 +279,9 @@ namespace conference.ViewModels
                 PhoneNumber = PhoneNumber,
                 Password = Password,
                 IdRole = SelectedRole.IdRole,
+                IdTypeOfEvents = SelectedTypeOfEvent.IdTypeOfEvent,
             };
-            if (SelectedTypeOfEvent.IdTypeOfEvent == 0) newUser.IdTypeOfEvents = SelectedTypeOfEvent.IdTypeOfEvent;
+            if (Image != "") newUser.Image = NumberId + ".png";
 
             try
             {

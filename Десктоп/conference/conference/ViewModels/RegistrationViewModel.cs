@@ -40,8 +40,8 @@ namespace conference.ViewModels
         private bool isVisible;
         private bool isAttach;
         private string _passwordChar;
-        
-        private readonly Regex EmailMask = new Regex(@"/^\S+@\S+\.\S+$/");
+
+        private readonly Regex EmailMask = new Regex("^\\S+@\\S+\\.\\S+$");
         /// <summary>
         /// Получает или задает идентификатор пользователя.
         /// </summary>
@@ -285,6 +285,8 @@ namespace conference.ViewModels
 
             try
             {
+                Db.Genders.Attach(newUser.IdGenderNavigation);
+                Db.TypeOfEvents.Attach(newUser.IdTypeOfEventsNavigation);
                 Db.Users.Add(newUser);
                 Db.SaveChanges();
                 MainWindowViewModel.Self.UC = new OrganizatorView();

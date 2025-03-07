@@ -5,7 +5,7 @@ namespace conference.Models;
 
 public partial class User
 {
-    public int IdUser { get; set; }
+    public int IdUser { get; set; } 
 
     public DateOnly DateOfBitrh { get; set; }
 
